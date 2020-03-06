@@ -6,6 +6,7 @@ class WebsiteDatabaseSingleton {
     private static WebsiteDatabaseSingleton obj;
 
     private WebsiteDatabaseSingleton() {
+
     }
 
     public static WebsiteDatabaseSingleton getInstance() {
@@ -15,6 +16,11 @@ class WebsiteDatabaseSingleton {
         return obj;
     }
 
+    private String databaseHost;
+    private String databasePort;
+    private String driverName;
+    private String databaseClient;
+
     public void storeWebsite(Website website) {
 
     }
@@ -23,11 +29,15 @@ class WebsiteDatabaseSingleton {
 
     }
 
-    public Website getWebsite(String url) {
-        return null; // todo
+    public Website getWebsite(Website website){
+        return null;
     }
 
     public void updateWebsite(Website website) {
 
+    }
+
+    public List<Website> getAllWebsites(Website website){
+        return null;
     }
 }
