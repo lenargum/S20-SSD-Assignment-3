@@ -1,3 +1,5 @@
+package project11;
+
 import java.util.Map;
 
 public class SEOSuggestions {

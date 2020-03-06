@@ -1,3 +1,5 @@
+package project11;
+
 public class SearchView {
     public String textBoxValue;
 
