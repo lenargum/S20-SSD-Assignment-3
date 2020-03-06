@@ -5,11 +5,13 @@ import java.util.List;
 class WebsiteDatabaseSingleton {
     private static WebsiteDatabaseSingleton obj;
 
-    private WebsiteDatabaseSingleton(){}
+    private WebsiteDatabaseSingleton() {
+    }
 
-    public static WebsiteDatabaseSingleton getInstance(){
-        if(obj==null){
-            obj = new WebsiteDatabaseSingleton(); }
+    public static WebsiteDatabaseSingleton getInstance() {
+        if (obj == null) {
+            obj = new WebsiteDatabaseSingleton();
+        }
         return obj;
     }
 
@@ -21,11 +23,11 @@ class WebsiteDatabaseSingleton {
 
     }
 
-    public Website getWebsite(Website website){
+    public Website getWebsite(String url) {
         return null; // todo
     }
 
-    public void updateWebsite(Website website){
+    public void updateWebsite(Website website) {
 
     }
 }

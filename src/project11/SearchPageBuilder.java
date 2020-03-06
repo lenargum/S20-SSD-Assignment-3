@@ -16,4 +16,7 @@ public class SearchPageBuilder {
         return pageToBuild;
     }
 
+    public void sortByRank(boolean isBackward) { }
+
+    public void hideWebsitesWithSmallKeywords(int keywordsNum) { }
 }
