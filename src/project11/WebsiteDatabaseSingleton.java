@@ -5,7 +5,13 @@ import java.util.List;
 class WebsiteDatabaseSingleton {
     private static WebsiteDatabaseSingleton obj;
 
+    private String databaseHost;
+    private String databasePort;
+    private String driverName;
+    private String databaseClient;
+
     private WebsiteDatabaseSingleton(){}
+
 
     public static WebsiteDatabaseSingleton getInstance(){
         if(obj==null){
@@ -22,10 +28,14 @@ class WebsiteDatabaseSingleton {
     }
 
     public Website getWebsite(Website website){
-        return null; // todo
+        return null;
     }
 
     public void updateWebsite(Website website){
 
+    }
+
+    public List<Website> getAllWebsites(Website website){
+        return null;
     }
 }
