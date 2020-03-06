@@ -41,9 +41,9 @@ class WebsiteDatabaseSingleton {
                 dbDriverName, databaseIP, databasePort, dbClientUsername, dbClientPassword, website.serialize()));
     }
 
-    public Website getWebsite(Website website) {
+    public Website getWebsite(String website) {
         return this.executeQuery(String.format("%s://%s:%s@%s:%s/get?%s",
-                dbDriverName, databaseIP, databasePort, dbClientUsername, dbClientPassword, website.serialize())).get(0);
+                dbDriverName, databaseIP, databasePort, dbClientUsername, dbClientPassword, website)).get(0);
     }
 
     public void updateWebsite(Website website) {
