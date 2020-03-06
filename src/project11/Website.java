@@ -44,4 +44,8 @@ public class Website {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public String serialize(){
+        return null;
+    }
 }
