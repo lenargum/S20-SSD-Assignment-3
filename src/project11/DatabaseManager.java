@@ -1,11 +1,11 @@
 package project11;
 
 public class DatabaseManager {
-    UserDatabase userDatabase;
-    WebsiteDatabase websiteDatabase;
+    Database database;
+    DatabaseConnection databaseConnection;
 
-    DatabaseManager() {
-        userDatabase = new UserDatabase();
-        websiteDatabase = new WebsiteDatabase();
+    DatabaseManager(Database database, DatabaseConnection databaseConnection) {
+        this.database = database;
+        this.databaseConnection = databaseConnection;
     }
 }

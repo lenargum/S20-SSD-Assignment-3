@@ -1,10 +1,8 @@
 package project11;
 
-class UserDatabase {
-    DatabaseConnection databaseConnection;
-
+class UserDatabase extends Database {
     UserDatabase() {
-        databaseConnection = new DatabaseConnection("host", 5432, "postgres", "user");
+
     }
 
     public User getUser(String name) {

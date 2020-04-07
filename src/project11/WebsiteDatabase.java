@@ -2,11 +2,9 @@ package project11;
 
 import java.util.List;
 
-class WebsiteDatabase {
-    DatabaseConnection databaseConnection;
-
+class WebsiteDatabase extends Database {
     WebsiteDatabase() {
-        databaseConnection = new DatabaseConnection("host", 5432, "postgres", "user");
+
     }
 
     public void storeWebsite(Website website) {
