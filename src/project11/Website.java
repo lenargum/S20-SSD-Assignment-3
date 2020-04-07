@@ -13,11 +13,6 @@ public class Website {
         this.rank = rank;
     }
 
-    static Website FromURL(String url)
-    {
-        return WebsiteDatabaseSingleton.getInstance().getWebsite(url);
-    }
-
     public String getUrl() {
         return url;
     }
