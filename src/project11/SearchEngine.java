@@ -5,10 +5,16 @@ public class SearchEngine {
 	private ISearchStrategy strategy;
 
     public SearchPage search(String request) {
+    	if(request.contains("popular") || request.contains("most visited")) {
+    		this.setStrategy(new MostVisitedPagesSearchStrategy());
+		} else if (request.contains("rarely visited")) {
+    		this.setStrategy(new RarelyVisitedPagesSearchStrategy());
+		}
+
 		return strategy.search(request);
     }
 
-	public void SetStrategy(ISearchStrategy newStrategy) {
-		strategy = newStrategy;
+	private void setStrategy(ISearchStrategy newStrategy) {
+		this.strategy = newStrategy;
 	}
 }
