@@ -9,6 +9,8 @@ public class SearchEngine {
     		this.setStrategy(new MostVisitedPagesSearchStrategy());
 		} else if (request.contains("rarely visited")) {
     		this.setStrategy(new RarelyVisitedPagesSearchStrategy());
+		} else {
+    		this.setStrategy(new MostVisitedPagesSearchStrategy());
 		}
 
 		return strategy.search(request);
