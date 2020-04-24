@@ -11,6 +11,10 @@ public class SearchPage implements IWebPage {
         urls = new ArrayList<>();
     }
 
+	public void setUrls(List<Website> newUrls) {
+		urls = newUrls;
+	}
+
     public List<Website> getUrls() {
         return urls;
     }

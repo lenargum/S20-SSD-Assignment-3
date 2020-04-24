@@ -2,32 +2,13 @@ package project11;
 
 public class SearchEngine {
 
+	private ISearchStrategy strategy;
+
     public SearchPage search(String request) {
-		
-		SearchPage page = new SearchPage();
-		IWebPage finalPage = null;
-
-		switch (request) {
-			case "request1": {
-				finalPage = new FancyBoundariesDecorator(
-						new BeautifulBasementDecorator(
-							new RelevantPicturesDecorator(page)
-							)
-						);
-				break;
-			}
-			case "request2": {
-				finalPage = new FancyBoundariesDecorator(
-						new BeautifulBasementDecorator(page)
-						);
-				break;
-			}
-			default: {
-				finalPage = page;
-			}
-		}
-		
-		return finalPage;
-
+		return strategy.search(request);
     }
+
+	public void SetStrategy(ISearchStrategy newStrategy) {
+		strategy = newStrategy;
+	}
 }
